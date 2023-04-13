@@ -1,0 +1,440 @@
+/* reset css */
+@import url('https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css');
+
+
+/* 첫 시작 화면 */
+.wrapper .startPage {
+    background: white;
+    width: 703px;
+    height: 800px;
+    box-sizing: border-box;
+    margin: 60px auto;
+    text-align: center;        
+    border: 1px solid black;
+    background-image: url(./img/titlell.jpeg);
+    background-size: cover;
+    
+    /* animation: up 1s; */
+    
+    /* display: none; */
+    /* display-none 했음*********************** */
+
+}
+
+
+.wrapper .startPage .title {
+    line-height: 3;
+    color: green;
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 6px 2px 2px gray;
+    animation: up 1s;
+
+}
+
+.wrapper .startPage #startBtn {
+    background: skyblue;
+    padding: 20px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 1px solid skyblue;
+    box-shadow: 6px 4px 6px rgb(36, 102, 128);
+    animation: up 1s;
+    margin-top: 250px;
+    width: 200px;
+    
+
+}
+
+.wrapper .startPage #startBtn:hover {
+    background: rgb(109, 140, 153);
+    cursor: pointer;
+}
+
+.wrapper .startPage .intro {
+    background: skyblue;
+    padding: 20px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 1px solid skyblue;
+    box-shadow: 6px 4px 6px rgb(36, 102, 128);
+    animation: up 1s;
+    margin-top: 100px;
+    margin-left: 20px;
+    width: 200px;
+}
+.wrapper .startPage .intro:hover {
+    background: rgb(109, 140, 153);
+    cursor: pointer;
+}
+@keyframes updown {
+    0% {margin-top: 0px;}
+100% {margin-top: 10px;}
+    
+}
+
+  /* -------------------------- */
+/* 게임 설명창 */
+.wrapper .startPage .introText {
+    background: skyblue;
+    width: 400px;
+    height: 400px;
+    color: black;
+    position: absolute;
+    top: 140px;
+    left: 600px;
+    opacity: 0.8;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 2;
+    display: none;
+}
+
+
+.wrapper .startPage .introText .yellow {
+    color: black;
+    background: yellow;
+    font-weight: bold;
+}
+.wrapper .startPage .introText .green {
+    color: black;
+    background: green;
+    font-weight: bold;
+}
+.wrapper .startPage .introText .gray {
+    color: black;
+    background: gray;
+    font-weight: bold;
+}
+
+
+/* -------------------------------------- */
+/* 두번쨰 화면, 선택 모드 */
+.wrapper .select {
+    background: white;
+    width: 703px;
+    height: 800px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    animation: up 1s;
+    border: 1px solid black;
+    background-image: url(./img/1.JPG);
+    background-size: cover;
+    margin: 60px auto;
+    
+    
+}
+
+.wrapper .select .title2 {
+    line-height: 2;
+    color: green;
+    margin-top: 50px;
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 6px 2px 2px gray;
+    /* animation: up 1s; */
+
+}
+
+@keyframes up {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    /* 50% {
+        opacity: 0.5;
+        transform: translateY(-20%);
+    } */
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrapper .select button {
+    background: skyblue;
+    margin: 350px 20px;
+    font-size: 25px;
+    padding: 10px 15px;
+    /* border-radius: 50px; */
+    border: 1px solid skyblue;
+    box-shadow: 6px 4px 6px rgb(36, 102, 128);
+    animation: up 1s;
+    width: 180px;
+    
+    
+}
+
+.wrapper .select button:hover {
+    background: rgb(163, 206, 222);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.wrapper .select .sLang {
+    background: skyblue;
+    margin: 0 20px;
+    font-size: 25px;
+    padding: 10px 15px;
+    /* border-radius: 50px; */
+    border: 1px solid skyblue;
+    box-shadow: 6px 4px 6px rgb(36, 102, 128);
+    animation: up 2s;
+}
+
+.wrapper .select .sNum {
+    background: skyblue;
+    margin: 0 20px;
+    font-size: 25px;
+    padding: 10px 15px;
+    /* border-radius: 50px; */
+    border: 1px solid skyblue;
+    box-shadow: 6px 4px 6px rgb(36, 102, 128);
+    animation: up 2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------- */
+
+.final {
+    width: 703px;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    margin: 60px auto;
+    display: none;
+}
+
+.wrap {
+    width: 500px;
+    height: 600px;
+    border: 1px solid red;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+input {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 32px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+button {
+    width: 500px;
+    box-sizing: border-box;
+}
+
+.wrap::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar {
+    box-sizing: border-box;
+    width: 199px;
+    height: 602px;
+    border: 1px solid red;
+    border-radius: 5px;
+
+}
+
+.correct {
+    box-sizing: border-box;
+    width: 199px;
+    height: 250px;
+    border: 1px solid red;
+}
+
+.incorrect {
+    box-sizing: border-box;
+    width: 199px;
+    height: 250px;
+    border: 1px solid red;
+}
+
+.hint {
+    box-sizing: border-box;
+    width: 199px;
+    height: 100px;
+    border: 1px solid red;
+}
+
+
+
+.status {
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    background: url(./hearth/hearth3.jpg) center;
+}
+
+/* keycoard css */
+
+.keyboard {
+    box-sizing: border-box;
+    width: 503px;
+    height: 198px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.keyboardBox {
+    box-sizing: border-box;
+    width: 50px;
+    height: 60px;
+    font-size: 25px;
+    border: 1px solid red;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+}
+
+.green {
+    background: green;
+}
+
+.yellow {
+    background: yellow;
+
+}
+
+.lightgrey {
+    background: lightgrey;
+
+}
+
+.title {
+    box-sizing: border-box;
+    border: 1px solid blue;
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+
+}
+
+.wordpad {
+    box-sizing: border-box;
+    border: 1px solid green;
+    width: 100%;
+    height: 210px;
+    overflow: scroll;
+}
+
+.h-title {
+    box-sizing: border-box;
+    border: 1px solid blue;
+    width: 100%;
+    height: 25px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+
+}
+
+.h-wordpad {
+    box-sizing: border-box;
+    border: 1px solid green;
+    width: 100%;
+    height: 75px;
+    overflow: scroll;
+}
+
+.h-wordpad::-webkit-scrollbar {
+    display: none;
+}
+
+.wordpad::-webkit-scrollbar {
+    display: none;
+}
+
+/* 사이드 성공 실패 */
+.sword {
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid red;
+}
+
+.dword {
+
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid red;
+
+}
+/*  */
+
+/* 상태창 css */
+
+.tool {
+    width: 80%;
+    height: 20%;
+    margin: 3% auto 0;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 20px;
+    color: greenyellow;
+    background: rgba(0, 0, 0, 0.7);
+
+    line-height: 126%;
+}
+
+.tool:hover {
+    border: 3px solid white;
+    font-weight: bold;
+
+}
+
+.tool:last-child:hover {
+    cursor: pointer;
+
+}
+
+.btn-lang {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border: 1px solid;
+    border-radius: 50%;
+    background: greenyellow;
+}
+
+
+
+
+
+
+
