@@ -37,12 +37,14 @@
 
         <div class="select">
             <span class="title2">W o r d l e</span> <br>
-            <select name="sNumber" class="sNum">
+            <select name="sNumber" class="sNum" id="sNum"> 
+            <!-- <select name="sNumber" class="sNum" id="sNum" onchange="selectNum()">  -->
                 <optgroup label="선택">
                     <option selected>글자수 선택</option>
-                    <option value="thr">3 x 6</option>
-                    <option value="fou">4 x 6</option>
-                    <option value="fiv">5 x 6</option>
+                    <option value="3" class="wordNum3">3 x 6</option>
+                    <option value="4" class="wordNum4">4 x 6</option>
+                    <option value="5" class="wordNum5">5 x 6</option>
+                    <option value="6" class="wordNum6">6 x 6</option>
                 </optgroup>
             </select>
             <button class="sbtn2" onclick="startClick()">시 작!</button>

@@ -220,7 +220,7 @@
     flex-wrap: wrap;
     border: 1px solid black;
     margin: 60px auto;
-    display: none;
+    display: none; 
 }
 
 .wrap {
