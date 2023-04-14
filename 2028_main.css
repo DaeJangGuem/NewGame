@@ -221,6 +221,8 @@
     border: 1px solid black;
     margin: 60px auto;
     display: none; 
+
+    position: relative;
 }
 
 .wrap {
@@ -433,8 +435,28 @@ body::-webkit-scrollbar {
 }
 
 
+/* 0414 */
+/* .top {
+    width: 100%;
+    border: 1px solid black;
+    position: relative;
+}
+
+.bottom {
+    width: 100%;
+    border: 1px solid black;
+    
+} */
+
+
+/* hint css */
+.btn-hint {
+    width: 197px;
+}
 
 
 
 
-
+.hide {
+    display: none;
+}

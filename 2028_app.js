@@ -1,8 +1,10 @@
 let l = 5; //사용자가 원하는 단어 길이
-
+let k = 0;
 let correct = 0;
 let t = 0;
 let flag = false;
+var answer;
+var hintAnswer;
 const $wrap = document.querySelector('.wrap');
 const $btn = document.querySelector('button');
 const $div = document.querySelector('div.temp');
@@ -15,80 +17,190 @@ const eng = [
     'bottom', 'attack', 'travel', //6~8번
 ];
 
+const hints = [
+    '그리고', '하지만', '소', //0~2번
+    '안으로', '바위', '선물', //3~5번
+    '보컬', '활용', '호버', //6~8번
+    '맨아래', '공격', '여행', //6~8번
+];
+
+const kor = [
+    'ㄱㅏㄴ', 'ㅅㅜㄹ', 'ㅍㅏㄹ', // 0~2번
+    'ㅎㅏㄹㅜ', 'ㅋㅓㅍㅣ', 'ㅂㅏㄷㅏ', // 3~5번
+    'ㅇㅗㅁㅗㄱ', 'ㅌㅏㄹㅈㅜ', 'ㅅㅗㄱㅡㅁ', // 6~8번
+    'ㅅㅓㄴㅂㅜㄹ', 'ㄱㅗㅏㅇㅇㅓ', 'ㅁㅏㅇㅜㅅㅡ' // 9~11번
+];
+
+const kHint = [
+    '우루사',
+];
+
+
+
 // 글자 수 선택
 
-// const $wordNum3 = document.querySelector('.select .wordNum3');
+
 const $sNum = document.querySelector('.sNum');
 $sNum.addEventListener('change', e => {
-    // console.log($sNum.value);
-    l = +$sNum.value; 
-    // console.log(l);
+
+    l = +$sNum.value;
+    console.log(l);
+    k++;
+    if (k !== 1) {
+        $div.replaceChildren();
+        engInit();
+    } else {
+        engInit();
+
+    }
+
 });
 
-console.log(l);
-// function selectNum() {
-//     const $sNum = document.getElementById('sNum');
+// 언어 선택 하는 로직 짜다가 실패
+// const $sLang = document.querySelector('.sLang');
+// $sLang.addEventListener('change', e => {
+//     console.log($sLang.value);
+//     if ($sLang.value === 2) { // 게임시작 화면 한국어 선택 시
+//         k++;
+//         if (k !== 1) {
+//             $div.replaceChildren();
+//             korInit();
+//         } else {
+//             $div.replaceChildren();
+//             korInit();
+//         }
+//     } else { // 게임시작 화면 영어 선택 시
+//         k++;
+//         if (k !== 1) {
+//             $div.replaceChildren();
+//             engInit();
+//         } else {
+//             engInit();
+//         }
+//     }
+// });
 
-//     l = $sNum.options[document.getElementById('sNum').selectedIndex].value;
-//     console.log(l);
-//     start();
+
+
+
+// 언어: 영어 선택 시 실행
+
+function engInit() {
+    //랜덤단어 선정
+    
+    if (l == 3) {
+        var ran3 = Math.floor(Math.random() * 3);
+        answer = eng[ran3];
+        hintAnswer = hints[ran3];
+
+    } else if (l == 4) {
+        var ran4 = Math.floor(Math.random() * 3) + 3;
+        answer = eng[ran4];
+        hintAnswer = hints[ran4];
+
+    } else if (l == 5) {
+        var ran5 = Math.floor(Math.random() * 3) + 6;
+        answer = eng[ran5];
+        hintAnswer = hints[ran5];
+
+    } else if (l == 6) {
+        var ran6 = Math.floor(Math.random() * 3) + 9;
+        answer = eng[ran6];
+        hintAnswer = hints[ran6];
+
+    };
+    console.log('정답지 : ' + answer);
+    console.log('힌트 : ' + hintAnswer);
+
+
+
+    //글자수대로 초기박스생성
+
+    for (let i = 0; i < answer.length; i++) {
+        //input 생성
+        const $new = document.createElement('input');
+        $new.setAttribute('type', 'text');
+        $new.setAttribute('maxlength', '1');
+        $new.setAttribute('onkeyup', "moveFocus(" + i + ")"); // 키보드이벤트1 추가
+        console.log('dddd' + answer);
+        $new.setAttribute('class', 'list');
+        $div.appendChild($new);
+
+        //마지막박스 생성 후
+        if (i === answer.length - 1) {
+            //다음 버튼생성
+            const $newbtn = document.createElement('button');
+            $newbtn.classList.add('hell');
+            $newbtn.textContent = '확인';
+            $div.appendChild($newbtn);
+        }
+        $new.style.width = (500 / answer.length) + "px";
+        $new.style.height = (500 / answer.length) + "px";
+    }
+
+}
+
+// 언어: 한국어 선택 시 실행
+
+// function korInit() {
+//     //랜덤단어 선정
+    
+//     if (l == 3) {
+//         var ran3 = Math.floor(Math.random() * 3);
+//         answer = kor[ran3];
+
+//     } else if (l == 4) {
+//         var ran4 = Math.floor(Math.random() * 3) + 3;
+//         answer = kor[ran4];
+
+//     } else if (l == 5) {
+//         var ran5 = Math.floor(Math.random() * 3) + 6;
+//         answer = kor[ran5];
+
+//     } else if (l == 6) {
+//         var ran6 = Math.floor(Math.random() * 3) + 9;
+//         answer = kor[ran6];
+
+//     };
+//     console.log('정답지 : ' + answer);
+
+
+
+//     //글자수대로 초기박스생성
+
+//     for (let i = 0; i < answer.length; i++) {
+//         //input 생성
+//         const $new = document.createElement('input');
+//         $new.setAttribute('type', 'text');
+//         $new.setAttribute('maxlength', '1');
+//         $new.setAttribute('onkeyup', "moveFocus(" + i + ")"); // 키보드이벤트1 추가
+//         console.log('dddd' + answer);
+//         $new.setAttribute('class', 'list');
+//         $div.appendChild($new);
+
+//         //마지막박스 생성 후
+//         if (i === answer.length - 1) {
+//             //다음 버튼생성
+//             const $newbtn = document.createElement('button');
+//             $newbtn.classList.add('hell');
+//             $newbtn.textContent = '확인';
+//             $div.appendChild($newbtn);
+//         }
+//         $new.style.width = (500 / answer.length) + "px";
+//         $new.style.height = (500 / answer.length) + "px";
+//     }
+
 // }
 
-
-
-
-//랜덤단어 선정
-
-
-if (l == 3) {
-    var answer = eng[Math.floor(Math.random() * 3)];
-    console.log(answer + '3');
-    console.log('3 if문 안의 l값: ' + l);
-} else if (l == 4) {
-    var answer = eng[Math.floor(Math.random() * 3) + 3];
-    console.log(answer + '4');
-    console.log('4 if문 안의 l값: ' + l);
-} else if (l == 5) {
-    var answer = eng[Math.floor(Math.random() * 3) + 6];
-    console.log(answer + '5');
-    console.log('5 if문 안의 l값: ' + l);
-} else if (l == 6) {
-    var answer = eng[Math.floor(Math.random() * 3) + 9];
-    console.log(answer + '6');
-    console.log('6 if문 안의 l값: ' + l);
-};
-console.log('정답지 : ' + answer);
-
-
-
-//글자수대로 초기박스생성
-
-for (let i = 0; i < answer.length; i++) {
-    //input 생성
-    const $new = document.createElement('input');
-    $new.setAttribute('type', 'text');
-    $new.setAttribute('maxlength', '1');
-    $new.setAttribute('onkeyup', 'moveFocus(' + i + ')'); // 키보드이벤트1 추가
-    $new.setAttribute('class', 'list');
-    $div.appendChild($new);
-
-    //마지막박스 생성 후
-    if (i === answer.length - 1) {
-        //다음 버튼생성
-        const $newbtn = document.createElement('button');
-        $newbtn.classList.add('hell');
-        $newbtn.textContent = '확인';
-        $div.appendChild($newbtn);
-    }
-    $new.style.width = (500 / answer.length) + "px";
-    $new.style.height = (500 / answer.length) + "px";
-}
 
 
 
 
 //키보드 이벤트1 : 포커스제어===============
 function moveFocus(i) {
+
+    // console.log(answer);
+
     const $inputFocus = document.querySelectorAll('.list');
     if (i == answer.length - 1 && event.key == 'Enter') { //마지막칸 enter 체점 후 다음라인 생성
         const $div = document.querySelector('div.temp');
@@ -115,6 +227,7 @@ $wrap.addEventListener('click', e => {
     if (!flag) creatInput($div);
 });
 
+
 //글자 채점 로직 함수===============
 function check($div, $input) {
 
@@ -131,7 +244,7 @@ function check($div, $input) {
             }
             correct++;
             if (correct == answer.length) { //=============승리 : 초록칸갯수=글자길이==================
-                victory();
+                victory(answer);
             }
 
         } else if (answer.includes($input[i].value) && $input[i].value !== '') {
@@ -167,7 +280,7 @@ function check($div, $input) {
     t++; //도전횟수 카운트
     if (t == answer.length + 2 && flag == false) {
         flag = true; // 실패해도 맞출때까지 박스 생성하게 해줌
-        defeat();
+        defeat(answer);
     }
 
     // 상태창 남은 기회 숫자 올리기
@@ -176,6 +289,14 @@ function check($div, $input) {
 
 
 }
+
+
+
+
+
+
+
+
 
 //다음라인 생성 함수===============
 function creatInput($div) {
@@ -198,7 +319,7 @@ function creatInput($div) {
 
 
 //승리시 정답함수===============
-function victory() {
+function victory(answer) {
     alert('성공입니다!');
     flag = true // 승리시 추가 라인 생성없음
 
@@ -210,7 +331,7 @@ function victory() {
     $vpad.appendChild($sword);
 };
 
-function defeat() {
+function defeat(answer) {
     alert('실패입니다!');
 
     //실패단어 사이드로
@@ -261,7 +382,7 @@ $selectLang.addEventListener('click', e => {
 
 
 
-// ==============================================================
+// 처음 화면 =============================================================
 
 const $startPage = document.querySelector('.startPage');
 const $startBtn = document.querySelector('#startBtn');
@@ -292,3 +413,17 @@ function startClick() {
     $final.style.display = 'flex';
 
 }
+
+// 0414 힌트 생성 로직
+const $btnHint = document.querySelector('.btn-hint');
+const $hintText = document.querySelector('.hint-text');
+
+$btnHint.addEventListener('click', e => {
+    $hintText.classList.toggle('hide');
+    if ($hintText.classList.contains('hide')) {
+        $hintText.textContent = '';
+    } else {
+        $hintText.textContent = hintAnswer;
+    }
+
+});

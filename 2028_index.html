@@ -37,8 +37,7 @@
 
         <div class="select">
             <span class="title2">W o r d l e</span> <br>
-            <select name="sNumber" class="sNum" id="sNum"> 
-            <!-- <select name="sNumber" class="sNum" id="sNum" onchange="selectNum()">  -->
+            <select name="sNumber" class="sNum" id="sNum">
                 <optgroup label="선택">
                     <option selected>글자수 선택</option>
                     <option value="3" class="wordNum3">3 x 6</option>
@@ -50,75 +49,84 @@
             <button class="sbtn2" onclick="startClick()">시 작!</button>
             <select name="선택" class="sLang">
                 <optgroup label="lang">
-                    <option value="Eng" selected>Eng</option>
-                    <option value="Kor">Kor</option>
+                    <option value="1" selected>Eng</option>
+                    <option value="2">Kor</option>
                 </optgroup>
             </select>
         </div>
 
-    <!--  -->
-    <div class="final">
-        <div class="wrap animate__animated animate__bounceInDown">
-            <div class="temp">
-            </div>
-        </div>
-        <div class="sidebar animate__animated animate__bounceInRight">
-            <div class="correct">
-                <div class="title">성공
-                    <div class="wordpad" id="vpad"></div>
+        <!--  -->
+        <div class="final">
+            <div class="wrap animate__animated animate__bounceInDown">
+                <div class="temp">
                 </div>
             </div>
-            <div class="incorrect">
-                <div class="title">실패</div>
-                <div class="wordpad" id="dpad"></div>
-            </div>
-            <div class="hint">
-                <div class="h-title">힌트</div>
-                <div class="h-wordpad"></div>
-            </div>
-        </div>
-        <div class="keyboard animate__animated animate__bounceInUp">
-            <div class="keyboardBox" value="a">a</div>
-            <div class="keyboardBox" value="b">b</div>
-            <div class="keyboardBox" value="c">c</div>
-            <div class="keyboardBox" value="d">d</div>
-            <div class="keyboardBox" value="e">e</div>
-            <div class="keyboardBox" value="f">f</div>
-            <div class="keyboardBox" value="g">g</div>
-            <div class="keyboardBox" value="h">h</div>
-            <div class="keyboardBox" value="i">i</div>
-            <div class="keyboardBox" value="j">j</div>
-            <div class="keyboardBox" value="k">k</div>
-            <div class="keyboardBox" value="l">l</div>
-            <div class="keyboardBox" value="m">m</div>
-            <div class="keyboardBox" value="n">n</div>
-            <div class="keyboardBox" value="o">o</div>
-            <div class="keyboardBox" value="p">p</div>
-            <div class="keyboardBox" value="q">q</div>
-            <div class="keyboardBox" value="r">r</div>
-            <div class="keyboardBox" value="s">s</div>
-            <div class="keyboardBox" value="t">t</div>
-            <div class="keyboardBox" value="u">u</div>
-            <div class="keyboardBox" value="v">v</div>
-            <div class="keyboardBox" value="w">w</div>
-            <div class="keyboardBox" value="x">x</div>
-            <div class="keyboardBox" value="y">y</div>
-            <div class="keyboardBox" value="z">z</div>
-        </div>
-        <div class="status animate__animated animate__bounceInRight">
-            <!-- 상태창 html -->
-            <div class="tool">남은 기회 <br><em></em></div>
-            <div class="tool">글자 수 선택</div>
-            <div class="tool">
-                <button class="btn-lang left"> ← </button>
-                <span class="eng">English</span> <span class="kor"></span>
-                <button class="btn-lang right"> →</button>
-            </div>
-            <div class="tool">처음화면으로 <br>돌아가기</div>
+            <div class="sidebar animate__animated animate__bounceInRight">
+                <div class="correct">
+                    <div class="title">성공
+                        <div class="wordpad" id="vpad"></div>
+                    </div>
+                </div>
+                <div class="incorrect">
+                    <div class="title">실패</div>
+                    <div class="wordpad" id="dpad"></div>
+                </div>
+                <div class="hint">
+                    <div class="h-title">힌트</div>
+                    <div class="h-wordpad">
+                        <button class="btn-hint">힌트 확인하기</button>
+                        <div class="hint-text"></div>
+                    </div>
 
-        </div>
-    </div>
+                </div>
+            </div>
+            <div class="keyboard animate__animated animate__bounceInUp">
+                <div class="keyboardBox" value="a">a</div>
+                <div class="keyboardBox" value="b">b</div>
+                <div class="keyboardBox" value="c">c</div>
+                <div class="keyboardBox" value="d">d</div>
+                <div class="keyboardBox" value="e">e</div>
+                <div class="keyboardBox" value="f">f</div>
+                <div class="keyboardBox" value="g">g</div>
+                <div class="keyboardBox" value="h">h</div>
+                <div class="keyboardBox" value="i">i</div>
+                <div class="keyboardBox" value="j">j</div>
+                <div class="keyboardBox" value="k">k</div>
+                <div class="keyboardBox" value="l">l</div>
+                <div class="keyboardBox" value="m">m</div>
+                <div class="keyboardBox" value="n">n</div>
+                <div class="keyboardBox" value="o">o</div>
+                <div class="keyboardBox" value="p">p</div>
+                <div class="keyboardBox" value="q">q</div>
+                <div class="keyboardBox" value="r">r</div>
+                <div class="keyboardBox" value="s">s</div>
+                <div class="keyboardBox" value="t">t</div>
+                <div class="keyboardBox" value="u">u</div>
+                <div class="keyboardBox" value="v">v</div>
+                <div class="keyboardBox" value="w">w</div>
+                <div class="keyboardBox" value="x">x</div>
+                <div class="keyboardBox" value="y">y</div>
+                <div class="keyboardBox" value="z">z</div>
+            </div>
+            <div class="status animate__animated animate__bounceInRight">
+                <!-- 상태창 html -->
+                <div class="tool">남은 기회 <br><em></em></div>
+                <div class="tool">글자 수 선택</div>
+                <div class="tool">
+                    <button class="btn-lang left"> ← </button>
+                    <span class="eng">English</span> <span class="kor"></span>
+                    <button class="btn-lang right"> →</button>
+                </div>
+                <div class="tool">처음화면으로 <br>돌아가기</div>
 
+            </div>
+
+            <!-- <div class="finish top animate__animated animate__bounceInDown">위 화면</div>
+            <div class="finish bottom animate__animated animate__bounceInUp">아래 화면</div> -->
+            
+            
+        </div>
+        
 
     </div>
 
