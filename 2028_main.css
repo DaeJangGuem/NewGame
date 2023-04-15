@@ -2,25 +2,34 @@
 @import url('https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css');
 
 
+
+
 /* 첫 시작 화면 */
+body{
+    /* background-image: url(https://img.youtube.com/vi/jOt2iU4ZdeE/maxresdefault.jpg?width=&format=webply&dpr=2&disable=upscale&quality=80);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background: rgb(57, 57, 57);
+}
 .wrapper .startPage {
     background: white;
     width: 703px;
     height: 800px;
     box-sizing: border-box;
     margin: 60px auto;
-    text-align: center;        
+    text-align: center;
     border: 1px solid black;
     background-image: url(./img/titlell.jpeg);
     background-size: cover;
-    
+    position: relative;
+    overflow: hidden;
+
     /* animation: up 1s; */
-    
+
     /* display: none; */
     /* display-none 했음*********************** */
 
 }
-
 
 .wrapper .startPage .title {
     line-height: 3;
@@ -29,7 +38,6 @@
     font-weight: bold;
     text-shadow: 6px 2px 2px gray;
     animation: up 1s;
-
 }
 
 .wrapper .startPage #startBtn {
@@ -43,8 +51,6 @@
     animation: up 1s;
     margin-top: 250px;
     width: 200px;
-    
-
 }
 
 .wrapper .startPage #startBtn:hover {
@@ -65,17 +71,24 @@
     margin-left: 20px;
     width: 200px;
 }
+
 .wrapper .startPage .intro:hover {
     background: rgb(109, 140, 153);
     cursor: pointer;
 }
-@keyframes updown {
-    0% {margin-top: 0px;}
-100% {margin-top: 10px;}
-    
-}
 
-  /* -------------------------- */
+@keyframes updown {
+    0% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: 10px;
+    }
+
+}
+/* 첫 시작화면 end */
+
 /* 게임 설명창 */
 .wrapper .startPage .introText {
     background: skyblue;
@@ -83,13 +96,16 @@
     height: 400px;
     color: black;
     position: absolute;
-    top: 140px;
-    left: 600px;
+    top: 75px;
+    left: 250px;
     opacity: 0.8;
     text-align: justify;
     font-size: 20px;
-    line-height: 2;
+    line-height: 250%;
     display: none;
+    padding: 5px;
+    border-radius: 26px;
+    font-weight: bold;
 }
 
 
@@ -98,11 +114,13 @@
     background: yellow;
     font-weight: bold;
 }
+
 .wrapper .startPage .introText .green {
     color: black;
     background: green;
     font-weight: bold;
 }
+
 .wrapper .startPage .introText .gray {
     color: black;
     background: gray;
@@ -120,14 +138,137 @@
     margin: 0 auto;
     text-align: center;
     display: none;
-    animation: up 1s;
+    /* animation: up 1s; */
     border: 1px solid black;
     background-image: url(./img/1.JPG);
     background-size: cover;
     margin: 60px auto;
-    
+    position: relative;
+    overflow: hidden;
+ 
+}
+.wrapper .startPage #ka {
+    background-image: url(./img/top\ door.jpg); 
+    background-repeat: no-repeat;    
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 10;
+    /* background: red; */
     
 }
+.wrapper .startPage #kb {
+    background-image: url(./img/bottom\ door.jpg);
+    background-repeat: no-repeat;    
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 9;
+    /* background: blue; */
+}
+.wrapper .select #kc {
+    background-image: url(./img/top\ door.jpg); 
+    background-repeat: no-repeat;  
+    
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 10;
+    /* background: red; */
+    
+}
+.wrapper .select #kd {
+    background-image: url(./img/bottom\ door.jpg);
+    background-repeat: no-repeat; 
+    
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 9;
+    /* background: blue; */
+}
+
+
+.wrapper .select #k1 {
+
+    background-image: url(./img/top\ door.jpg);  
+    background-repeat: no-repeat;   
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 10;
+    /* background: red; */
+    
+}
+.wrapper .select #k2 {
+    background-image: url(./img/bottom\ door.jpg);
+    background-repeat: no-repeat; 
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 9;
+    /* background: blue; */
+}
+
+.wrapper .final #k3 { 
+    background-image: url(./img/top\ door.jpg); 
+    background-repeat: no-repeat;  
+
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 10;
+    /* background: red; */
+}
+.wrapper .final #k4 {
+    background-image: url(./img/bottom\ door.jpg);
+    background-repeat: no-repeat; 
+    
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 9;
+    /* background: blue; */
+    
+} 
 
 .wrapper .select .title2 {
     line-height: 2;
@@ -167,8 +308,8 @@
     box-shadow: 6px 4px 6px rgb(36, 102, 128);
     animation: up 1s;
     width: 180px;
-    
-    
+
+
 }
 
 .wrapper .select button:hover {
@@ -200,6 +341,7 @@
 }
 
 
+/* 게임 설명 end */
 
 
 
@@ -210,8 +352,7 @@
 
 
 
-
-/* -------------------------- */
+/* 메인 게임화면 css */
 
 .final {
     width: 703px;
@@ -220,26 +361,32 @@
     flex-wrap: wrap;
     border: 1px solid black;
     margin: 60px auto;
-    display: none; 
+    display: none;
+    overflow: hidden;
+    background-image: url(./img/background.jpg);
+    background-repeat: no-repeat;
+    
 
     position: relative;
 }
 
 .wrap {
+    background-image: url(img/wrap.jpg);
     width: 500px;
     height: 600px;
-    border: 1px solid red;
-    border-radius: 5px;
+    border-radius: 15px;
     overflow: auto;
 }
 
 input {
     box-sizing: border-box;
+    background-image: url(./img/green.png);
+    background-size: cover;
     width: 50px;
     height: 50px;
     text-align: center;
-    font-size: 32px;
-    border: 1px solid black;
+    font-size: 70px;
+    background-color:transparent;
     border-radius: 5px;
 }
 
@@ -256,55 +403,104 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+
+/* 사이드 메뉴 css */
 .sidebar {
     box-sizing: border-box;
+    background-image: url(./img/sidebar.jpg);
+    background-repeat: no-repeat;
     width: 199px;
     height: 602px;
-    border: 1px solid red;
+    
     border-radius: 5px;
+
+    padding: 40px 0;
 
 }
 
 .correct {
     box-sizing: border-box;
     width: 199px;
-    height: 250px;
-    border: 1px solid red;
+    height: 200px;
+    /* border: 1px solid red; */
 }
 
 .incorrect {
     box-sizing: border-box;
     width: 199px;
-    height: 250px;
-    border: 1px solid red;
+    height: 200px;
+    /* border: 1px solid red; */
 }
 
 .hint {
     box-sizing: border-box;
     width: 199px;
     height: 100px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
+.greenbox{
+
+    animation: jittery 4s ;
+
+}
+@keyframes jittery {
+    5%,
+    50% {
+      transform: scale(1);
+    }
+  
+    10% {
+      transform: scale(0.9);
+    }
+  
+    15% {
+      transform: scale(1.15);
+    }
+  
+    20% {
+      transform: scale(1.15) rotate(-5deg);
+    }
+  
+    25% {
+      transform: scale(1.15) rotate(5deg);
+    }
+  
+    30% {
+      transform: scale(1.15) rotate(-3deg);
+    }
+  
+    35% {
+      transform: scale(1.15) rotate(2deg);
+    }
+  
+    40% {
+      transform: scale(1.15) rotate(0);
+    }
+  }
+  
 
 
+/* 상태창 css */
 .status {
     width: 200px;
     height: 200px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     box-sizing: border-box;
     border-radius: 5px;
+    background-image: url(./img/option.jpg);
 
-    background: url(./hearth/hearth3.jpg) center;
+    
 }
 
 /* keycoard css */
 
 .keyboard {
+    background-image: url(./img/keyboard.jpg);
     box-sizing: border-box;
     width: 503px;
     height: 198px;
-    border: 1px solid blue;
+   
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -314,62 +510,108 @@ body::-webkit-scrollbar {
 
 .keyboardBox {
     box-sizing: border-box;
-    width: 50px;
-    height: 60px;
+    width: 46px;
+    height: 50px;
     font-size: 25px;
-    border: 1px solid red;
+    border: 1px solid rgba(0, 0, 0, 0.3);
     text-align: center;
-    line-height: 60px;
+    line-height: 45px;
     border-radius: 10px;
+    margin-top: 6px;
 }
 
 .green {
     background: green;
+    border-radius: 10px;
+    
+    animation: vibration .3s infinite;
+  
+
 }
+
+@keyframes vibration {
+    from {
+        transform: rotate(5deg);
+    }
+
+    to {
+        transform: rotate(-8deg);
+    }
+}
+
+
 
 .yellow {
     background: yellow;
+    animation: vibration .3s infinite;
 
 }
+
+
 
 .lightgrey {
     background: lightgrey;
+    animation: vibration .3s infinite;
 
 }
 
-.title {
+.v-title,
+.d-title {
     box-sizing: border-box;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100%;
     height: 35px;
     font-size: 20px;
     text-align: center;
     line-height: 35px;
+    color: white;
+
+    border-bottom: 1px solid black;
 
 }
 
 .wordpad {
     box-sizing: border-box;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 100%;
-    height: 210px;
+    height: 160px;
     overflow: scroll;
 }
 
+/* hint css */
+
 .h-title {
     box-sizing: border-box;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100%;
     height: 25px;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     line-height: 25px;
+    color: white;
 
+}
+
+.btn-hint {
+    width: 100px;
+    margin-left: 50px;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+.hide {
+    display: none;
+}
+
+.hint-text {
+    color: white;
+    text-align: center;
+    margin-top: 18px;
 }
 
 .h-wordpad {
     box-sizing: border-box;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 100%;
     height: 75px;
     overflow: scroll;
@@ -387,21 +629,30 @@ body::-webkit-scrollbar {
 .sword {
     width: 100%;
     font-size: 15px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    color: white;
+    text-align: center;
+    margin-top: 5px;
 }
 
 .dword {
 
     width: 100%;
     font-size: 15px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    color: white;
+    text-align: center;
+    margin-top: 5px;
 
 }
+
 /*  */
 
 /* 상태창 css */
 
 .tool {
+    
+    background-repeat: no-repeat;
     width: 80%;
     height: 20%;
     margin: 3% auto 0;
@@ -434,29 +685,3 @@ body::-webkit-scrollbar {
     background: greenyellow;
 }
 
-
-/* 0414 */
-/* .top {
-    width: 100%;
-    border: 1px solid black;
-    position: relative;
-}
-
-.bottom {
-    width: 100%;
-    border: 1px solid black;
-    
-} */
-
-
-/* hint css */
-.btn-hint {
-    width: 197px;
-}
-
-
-
-
-.hide {
-    display: none;
-}
