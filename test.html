@@ -108,6 +108,63 @@ a span:nth-child(4){
         bottom: 100%;
     }
 }
+    /*      -=------------------------ */
+    /* 이름 통통 튀게 하기 테스트 */
+
+    .all {
+        background: yellowgreen;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        
+    }
+
+    .topp {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        color: red;
+        border: 1px solid black;
+        animation: downdown 1s infinite;
+        animation-direction: alternate;
+    }
+
+    .bottomm {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        color: blue;
+        border: 1px solid black;
+        animation: upup 1s infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes upup {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5%);
+    } 
+    
+    100% {
+        transform: translateY(-10px);
+    }
+    }
+
+    @keyframes downdown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(5%);
+    } 
+    
+    100% {
+        transform: translateY(10px);
+    }
+    }
+
     </style>
 </head>
 
@@ -132,8 +189,17 @@ a span:nth-child(4){
         <span></span>
         <span></span>
         Neon button
-    </a>
 
+
+        
+    </a>
+        <div class="all">
+            <div class="topp">
+                aaa
+            </div>
+    
+            <div class="bottomm">bbb</div>
+        </div>
 </body>
 
 </html>

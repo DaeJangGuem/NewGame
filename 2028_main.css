@@ -9,8 +9,83 @@ body{
     /* background-image: url(https://img.youtube.com/vi/jOt2iU4ZdeE/maxresdefault.jpg?width=&format=webply&dpr=2&disable=upscale&quality=80);
     background-repeat: no-repeat;
     background-size: cover; */
-    background: rgb(57, 57, 57);
+    /* background: rgb(57, 57, 57); */
+    background-image: url(./img/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
+
+.vic{
+    width: 100%;
+    height: 150px;
+    opacity: 0.5;
+    position: absolute;
+    top :37%;
+    left : 0;
+    background: black;
+    font-size: 70px;
+    text-align: center;
+    line-height: 150px;
+    color: white;
+    font-family: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+.fail{
+    width: 100%;
+    height: 150px;
+    opacity: 0.5;
+    position: absolute;
+    top :37%;
+    left : 0;
+    background: black;
+    font-size: 70px;
+    text-align: center;
+    line-height: 150px;
+    color: white;
+    font-family: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+
+.wrapper2 {
+  height: 300px;
+  width: 100%;
+  /*This part is important for centering*/
+  display: grid;
+  margin: 0 auto;
+  color: white;
+  font-size: 60px;
+  place-items: center;
+  margin-top: 40px;
+}
+
+.typing-demo {
+  width: 430px;
+  animation: typing 2s steps(22), blink .5s  infinite ;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  text-shadow:1px 1px 1px #000;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow:1px 1px 1px #000;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
 .wrapper .startPage {
     background: white;
     width: 703px;
@@ -33,47 +108,55 @@ body{
 
 .wrapper .startPage .title {
     line-height: 3;
-    color: green;
+    color: white;
     font-size: 80px;
     font-weight: bold;
     text-shadow: 6px 2px 2px gray;
     animation: up 1s;
 }
 
+.wrapper .startPage .title span {
+    border: 1px solid green;
+    padding: 15px 15px;
+    
+}
+
 .wrapper .startPage #startBtn {
-    background: skyblue;
+    background: green;
     padding: 20px 20px;
     font-size: 20px;
     font-weight: bold;
     border-radius: 50px;
-    border: 1px solid skyblue;
-    box-shadow: 6px 4px 6px rgb(36, 102, 128);
+    border: 1px solid green;
+    box-shadow: 6px 4px 6px rgb(8, 78, 8);
     animation: up 1s;
     margin-top: 250px;
     width: 200px;
 }
 
 .wrapper .startPage #startBtn:hover {
-    background: rgb(109, 140, 153);
+    background: rgb(8, 78, 8);
     cursor: pointer;
 }
 
 .wrapper .startPage .intro {
-    background: skyblue;
+    background: yellow;
     padding: 20px 20px;
     font-size: 20px;
     font-weight: bold;
     border-radius: 50px;
-    border: 1px solid skyblue;
-    box-shadow: 6px 4px 6px rgb(36, 102, 128);
+    border: 1px solid yellow;
+    box-shadow: 6px 4px 6px rgb(194, 194, 57);
     animation: up 1s;
     margin-top: 100px;
     margin-left: 20px;
     width: 200px;
+    text-shadow:1px 1px 1px #000;
+    
 }
 
 .wrapper .startPage .intro:hover {
-    background: rgb(109, 140, 153);
+    background: rgb(223, 223, 91);
     cursor: pointer;
 }
 
@@ -87,18 +170,65 @@ body{
     }
 
 }
+
+/* 이름 통통 테스트 */
+
+/* 통통 애니 */
+/*
+@keyframes upup {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5%);
+    } 
+    
+    100% {
+        transform: translateY(-10px);
+    }
+    }
+
+    @keyframes downdown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(5%);
+    } 
+    
+    100% {
+        transform: translateY(10px);
+    }
+    }
+/*  */
+/*
+.wrapper .startPage .up1 {
+    color: red;
+    animation: upup 1s infinite;
+    animation-direction: alternate;
+}
+
+.wrapper .startPage .down1 {
+    color: blue;
+    animation: downdown infinite;
+    animation-direction: alternate;
+}
+
+
+/*  */
+
 /* 첫 시작화면 end */
 
 /* 게임 설명창 */
 .wrapper .startPage .introText {
-    background: skyblue;
+    background: white;
     width: 400px;
     height: 400px;
     color: black;
     position: absolute;
-    top: 75px;
-    left: 250px;
-    opacity: 0.8;
+    top: 70px;
+    left: 150px;
+    opacity: 0.9;
     text-align: justify;
     font-size: 20px;
     line-height: 250%;
@@ -106,6 +236,17 @@ body{
     padding: 5px;
     border-radius: 26px;
     font-weight: bold;
+    animation: fadein 1s;
+    padding-left: 30px;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.9;
+    }
 }
 
 
@@ -115,7 +256,7 @@ body{
     font-weight: bold;
 }
 
-.wrapper .startPage .introText .green {
+.wrapper .startPage .introText .green1 {
     color: black;
     background: green;
     font-weight: bold;
@@ -147,6 +288,14 @@ body{
     overflow: hidden;
  
 }
+
+.wrapper .select .title2 span {
+    border: 1px solid green;
+    padding: 15px 15px;
+    background: green;
+      
+}
+
 .wrapper .startPage #ka {
     background-image: url(./img/top\ door.jpg); 
     background-repeat: no-repeat;    
@@ -272,7 +421,7 @@ body{
 
 .wrapper .select .title2 {
     line-height: 2;
-    color: green;
+    color: white;
     margin-top: 50px;
     font-size: 80px;
     font-weight: bold;
@@ -299,13 +448,13 @@ body{
 }
 
 .wrapper .select button {
-    background: skyblue;
+    background: green;
     margin: 350px 20px;
     font-size: 25px;
     padding: 10px 15px;
     /* border-radius: 50px; */
-    border: 1px solid skyblue;
-    box-shadow: 6px 4px 6px rgb(36, 102, 128);
+    border: 1px solid green;
+    box-shadow: 6px 4px 6px rgb(8, 78, 8);
     animation: up 1s;
     width: 180px;
 
@@ -313,30 +462,30 @@ body{
 }
 
 .wrapper .select button:hover {
-    background: rgb(163, 206, 222);
+    background: rgb(8, 78, 8);
     opacity: 0.8;
     cursor: pointer;
 }
 
 .wrapper .select .sLang {
-    background: skyblue;
+    background: gray;
     margin: 0 20px;
     font-size: 25px;
     padding: 10px 15px;
     /* border-radius: 50px; */
-    border: 1px solid skyblue;
-    box-shadow: 6px 4px 6px rgb(36, 102, 128);
+    border: 1px solid gray;
+    box-shadow: 6px 4px 6px rgb(95, 92, 92);
     animation: up 2s;
 }
 
 .wrapper .select .sNum {
-    background: skyblue;
+    background: yellow;
     margin: 0 20px;
     font-size: 25px;
     padding: 10px 15px;
     /* border-radius: 50px; */
-    border: 1px solid skyblue;
-    box-shadow: 6px 4px 6px rgb(36, 102, 128);
+    border: 1px solid yellow;
+    box-shadow: 4px 4px 4px rgb(225, 225, 50);
     animation: up 2s;
 }
 
@@ -365,6 +514,7 @@ body{
     overflow: hidden;
     background-image: url(./img/background.jpg);
     background-repeat: no-repeat;
+    position: relative;
     
 
     position: relative;
@@ -379,8 +529,7 @@ body{
 }
 
 input {
-    box-sizing: border-box;
-    background-image: url(./img/green.png);
+    box-sizing: border-box;    
     background-size: cover;
     width: 50px;
     height: 50px;
@@ -388,7 +537,10 @@ input {
     font-size: 70px;
     background-color:transparent;
     border-radius: 5px;
+    border: 0px;
 }
+
+input:focus {outline:none;}
 
 button {
     width: 500px;
@@ -421,14 +573,14 @@ body::-webkit-scrollbar {
 .correct {
     box-sizing: border-box;
     width: 199px;
-    height: 200px;
+    height: 210px;
     /* border: 1px solid red; */
 }
 
 .incorrect {
     box-sizing: border-box;
     width: 199px;
-    height: 200px;
+    height: 210px;
     /* border: 1px solid red; */
 }
 
@@ -436,7 +588,8 @@ body::-webkit-scrollbar {
     box-sizing: border-box;
     width: 199px;
     height: 100px;
-    /* border: 1px solid red; */
+    
+
 }
 
 .greenbox{
@@ -488,6 +641,7 @@ body::-webkit-scrollbar {
     /* border: 1px solid red; */
     box-sizing: border-box;
     border-radius: 5px;
+    padding-top : 45px;
     background-image: url(./img/option.jpg);
 
     
@@ -505,24 +659,52 @@ body::-webkit-scrollbar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 5px;
+    padding-top: 10px;
 }
 
 .keyboardBox {
     box-sizing: border-box;
+    background-image: url(./img/normalbox.png);
     width: 46px;
     height: 50px;
     font-size: 25px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    
     text-align: center;
     line-height: 45px;
     border-radius: 10px;
-    margin-top: 6px;
+    
+}
+
+.keyboardK {
+    background-image: url(./img/keyboard.jpg);
+    box-sizing: border-box;
+    width: 503px;
+    height: 198px;
+   
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.keyboardBoxK {
+    box-sizing: border-box;
+    background-image: url(./img/normalbox.png);
+    width: 46px;
+    height: 50px;
+    font-size: 25px;
+    
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+    
 }
 
 .green {
-    background: green;
+    background-image: url(./img/greenbox.png); 
     border-radius: 10px;
+    
     
     animation: vibration .3s infinite;
   
@@ -542,7 +724,7 @@ body::-webkit-scrollbar {
 
 
 .yellow {
-    background: yellow;
+    background-image: url(./img/yellowbox.png); 
     animation: vibration .3s infinite;
 
 }
@@ -550,24 +732,53 @@ body::-webkit-scrollbar {
 
 
 .lightgrey {
-    background: lightgrey;
+    background-image: url(./img/graybox.png); 
     animation: vibration .3s infinite;
 
 }
+.hell{
+    background-image: url(./img/check.png);
+    background-color:transparent;
+    border: 0px;
+    height: 22px;
+    color: white;
+}
 
-.v-title,
-.d-title {
+.v-title
+ {
+    background-image: url(./img/victory.png);
+    background-repeat: no-repeat;
+       
     box-sizing: border-box;
     /* border: 1px solid blue; */
-    width: 100%;
-    height: 35px;
-    font-size: 20px;
+    width: 190px;
+    height: 65px;
+    font-size: 15px;
     text-align: center;
-    line-height: 35px;
+  
     color: white;
+    margin-left: 33px;
 
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
 
+}
+.d-title{
+    
+        background-image: url(./img/defeat.png);
+        background-repeat: no-repeat;           
+        box-sizing: border-box;
+        /* border: 1px solid blue; */
+        width: 190px;
+        height: 65px;
+        font-size: 15px;
+        text-align: center;
+       
+        color: white;
+        margin-left: 33px;
+    
+        /* border-bottom: 1px solid black; */
+    
+    
 }
 
 .wordpad {
@@ -580,24 +791,33 @@ body::-webkit-scrollbar {
 
 /* hint css */
 
-.h-title {
+.h-title, .h-con {
     box-sizing: border-box;
+    background-image: url(./img/hint.jpg);
     /* border: 1px solid blue; */
-    width: 100%;
-    height: 25px;
-    font-size: 20px;
-    text-align: center;
-    line-height: 25px;
+    width: 130px;
+    height: 80px;
+     font-size: 20px;
+    line-height: 80px;
+    text-align: center;  
     color: white;
+    font-family: bold;
+
+   
+    margin: 10px auto;
 
 }
 
-.btn-hint {
-    width: 100px;
-    margin-left: 50px;
-    border-radius: 10px;
-    margin-top: 12px;
+.h-title:hover{
+    cursor: pointer;
 }
+
+.h-con:hover{
+    cursor: pointer;
+}
+
+
+
 
 .hide {
     display: none;
@@ -628,7 +848,7 @@ body::-webkit-scrollbar {
 /* 사이드 성공 실패 */
 .sword {
     width: 100%;
-    font-size: 15px;
+    font-size: 25px;
     /* border: 1px solid red; */
     color: white;
     text-align: center;
@@ -638,31 +858,30 @@ body::-webkit-scrollbar {
 .dword {
 
     width: 100%;
-    font-size: 15px;
+    font-size: 25px;
+   
     /* border: 1px solid red; */
     color: white;
     text-align: center;
     margin-top: 5px;
-
+   
 }
 
 /*  */
 
 /* 상태창 css */
 
-.tool {
+.tool {    
     
-    background-repeat: no-repeat;
-    width: 80%;
-    height: 20%;
-    margin: 3% auto 0;
-    border: 1px solid white;
+    width: 130px;
+    height: 36px;
+    margin: 0px auto 0;    
+    font-size: 15px;
+    margin-right: 40px;
     text-align: center;
     border-radius: 20px;
-    color: greenyellow;
-    background: rgba(0, 0, 0, 0.7);
-
-    line-height: 126%;
+    color: white;
+    line-height: 36px;
 }
 
 .tool:hover {
@@ -678,10 +897,19 @@ body::-webkit-scrollbar {
 
 .btn-lang {
     width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    border: 1px solid;
-    border-radius: 50%;
-    background: greenyellow;
+    height: 20px; 
+    
+    
 }
 
+button{
+    background-color:transparent;
+    color: white;
+    margin: 0px;
+    border: none;
+}
+
+.btn-lang:hover{
+    cursor: pointer;
+
+}
