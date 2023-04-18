@@ -91,7 +91,7 @@ function init() {
     const $kor = document.querySelector('.kor');
     $eng.classList.add('hide');
     $kor.classList.add('hide');
-    console.log(selectedLang);
+    // console.log(selectedLang);
     $ggg.classList.add('hide');
     $keyboardK.classList.add('hide');
 
@@ -169,8 +169,8 @@ function init() {
         }
 
     };
-    console.log('정답지 : ' + answer);
-    console.log('힌트 : ' + hintAnswer);
+    // console.log('정답지 : ' + answer);
+    // console.log('힌트 : ' + hintAnswer);
     $chanceNum.textContent = answer.length + 2;
     flag = false;
 
@@ -235,9 +235,9 @@ function moveFocus(i, event) {
     }
 
     if (event.keyCode === 27) { //esc 누르면 input 포커스 아웃  
-        console.log('eeeeee');
+        // console.log('eeeeee');
         $input[i].blur();
-        console.log('xxxxxxx');
+        // console.log('xxxxxxx');
     } else if (!(i == answer.length - 1) && event.keyCode !== 8) {
         if (event.isComposing) return;
         else {
